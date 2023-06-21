@@ -1,5 +1,12 @@
 import css from './Profile.module.css';
-export const Profile = ({ username, avatar, tags, location, stats }) => (
+import PropTypes from 'prop-types';
+export const Profile = ({
+  username,
+  avatar = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzoV94y1RNYHkFMgVcNA7C2rS3YCQhKIMDh5k2rQuW-w&s',
+  tags,
+  location,
+  stats,
+}) => (
   <>
     <div className={css.profile} key={username}>
       <div className={css.description}>
@@ -26,3 +33,11 @@ export const Profile = ({ username, avatar, tags, location, stats }) => (
     </div>
   </>
 );
+
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  tags: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  stats: PropTypes.objectOf(PropTypes.number.isRequired),
+};

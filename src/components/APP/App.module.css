@@ -1,0 +1,9 @@
+.hometask {
+  height: '100vh';
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: grid;
+  font-size: 40px;
+  color: #010101;
+}

@@ -1,0 +1,21 @@
+.item_ofline {
+  background-color: red;
+  display: block;
+  margin: auto;
+}
+
+.item_online {
+  background-color: green;
+  display: block;
+  margin: auto;
+}
+.status {
+  font-size: 16px;
+}
+.title {
+  display: inline-block;
+  background-color: rgb(255, 253, 253);
+  border: 2px solid rgba(28, 110, 164, 0.28);
+  margin-bottom: 25px;
+  box-shadow: 1px 10px 23px 4px rgba(91, 51, 91, 0.61);
+}

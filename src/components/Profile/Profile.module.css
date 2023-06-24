@@ -6,6 +6,13 @@ P {
   padding: 5px;
   display: grid;
 }
+.profile {
+  display: inline-block;
+  background-color: rgb(255, 253, 253);
+  border: 2px solid rgba(28, 110, 164, 0.28);
+  margin-bottom: 25px;
+  box-shadow: 1px 10px 23px 4px rgba(91, 51, 91, 0.61);
+}
 .location {
   margin: 0;
 }
@@ -18,10 +25,6 @@ P {
   border-top: 2px solid rgba(28, 110, 164, 0.28);
 }
 
-.profile {
-  display: block;
-  background-color: rgb(255, 253, 253);
-}
 .description {
   display: block;
   text-align: center;
@@ -29,10 +32,4 @@ P {
 
 .name {
   font-weight: bold;
-}
-
-.profile {
-  border: 2px solid rgba(28, 110, 164, 0.28);
-  margin-bottom: 25px;
-  box-shadow: 1px 10px 23px 4px rgba(91, 51, 91, 0.61);
 }

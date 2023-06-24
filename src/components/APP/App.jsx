@@ -1,16 +1,17 @@
 import user from '../../data/user.json';
 import data from '../../data/data.json';
 import friends from '../../data/friends.json';
+import transactions from '../../data/transactions.json';
 import css from './App.module.css';
 import { Profile } from '../Profile/Profile';
 import { Statistics } from '../Statistics/Statistics';
 import { FriendList } from '../FriendList/FriendList';
+import { TransactionHistory } from '../TransactionHistory/TransactionHistory';
 
 import PropTypes from 'prop-types';
 //import css from './Profile/Profile.module.css';
 
 export const App = () => {
-  console.log(data);
   return (
     <div className={css.hometask}>
       <Profile
@@ -25,6 +26,7 @@ export const App = () => {
       <Statistics title="Upload stats" stats={data}></Statistics>
       <Statistics stats={data} />
       <FriendList friends={friends} />
+      <TransactionHistory items={transactions}></TransactionHistory>
     </div>
   );
 };
@@ -39,6 +41,8 @@ App.propTypes = {
     views: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,
     title: PropTypes.string,
-    stats: PropTypes.arrayOf(),
+    stats: PropTypes.array.isRequired,
+    friends: PropTypes.array.isRequired,
+    items: PropTypes.array.isRequired,
   }),
 };

@@ -8,9 +8,6 @@ import { Statistics } from '../Statistics/Statistics';
 import { FriendList } from '../FriendList/FriendList';
 import { TransactionHistory } from '../TransactionHistory/TransactionHistory';
 
-import PropTypes from 'prop-types';
-//import css from './Profile/Profile.module.css';
-
 export const App = () => {
   return (
     <div className={css.hometask}>
@@ -29,20 +26,4 @@ export const App = () => {
       <TransactionHistory items={transactions}></TransactionHistory>
     </div>
   );
-};
-
-App.propTypes = {
-  Profile: PropTypes.shape({
-    username: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    followers: PropTypes.number.isRequired,
-    views: PropTypes.number.isRequired,
-    likes: PropTypes.number.isRequired,
-    title: PropTypes.string,
-    stats: PropTypes.array.isRequired,
-    friends: PropTypes.array.isRequired,
-    items: PropTypes.array.isRequired,
-  }),
 };

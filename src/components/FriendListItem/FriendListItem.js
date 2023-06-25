@@ -1,9 +1,9 @@
 import css from './FriendListItem.module.css';
 import PropTypes from 'prop-types';
 
-export const FriendListItem = ({ avatar, name, isOnline, id }) => {
+export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
-    <li className={css.title} key={id}>
+    <li className={css.title}>
       <span className={isOnline ? css.item_online : css.item_ofline}>
         {isOnline ? 'onLine' : 'ofLine'}
       </span>
@@ -22,5 +22,4 @@ FriendListItem.protoType = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   isOnline: PropTypes.bool.isRequired,
-  id: PropTypes.number.isRequired,
 };
